@@ -1,0 +1,128 @@
+{
+    "__class__": "Lista",
+    "aparatos": [
+        {
+            "__class__": "Televisor",
+            "__atributos__": {
+                "marca": "lg",
+                "modelo": "ll",
+                "color": "no",
+                "pais": "br",
+                "precioBase": 3000.0,
+                "pantalla": "led",
+                "pulgadas": 32.0,
+                "definicion": "FULL HD",
+                "internet": false
+            }
+        },
+        {
+            "__class__": "Lavarropa",
+            "__atributos__": {
+                "marca": "tres",
+                "modelo": "33",
+                "color": "trigo",
+                "pais": "trinidad",
+                "precioBase": 7000.0,
+                "capacidad": 7,
+                "velocidad": 1000,
+                "programas": 2,
+                "carga": "sup"
+            }
+        },
+        {
+            "__class__": "Heladera",
+            "__atributos__": {
+                "marca": "ma",
+                "modelo": "mo",
+                "color": "de",
+                "pais": "lo",
+                "precioBase": 300.0,
+                "capacidad": 3,
+                "freezer": false,
+                "ciclica": false
+            }
+        },
+        {
+            "__class__": "Televisor",
+            "__atributos__": {
+                "marca": "lg",
+                "modelo": "ph",
+                "color": "il",
+                "pais": "ips",
+                "precioBase": 700.0,
+                "pantalla": "led",
+                "pulgadas": 9.0,
+                "definicion": "SD",
+                "internet": false
+            }
+        },
+        {
+            "__class__": "Heladera",
+            "__atributos__": {
+                "marca": "philips",
+                "modelo": "rim",
+                "color": "verde",
+                "pais": "arg",
+                "precioBase": 4000.0,
+                "capacidad": 3,
+                "freezer": false,
+                "ciclica": false
+            }
+        },
+        {
+            "__class__": "Televisor",
+            "__atributos__": {
+                "marca": "cbhcb",
+                "modelo": "gjhjg",
+                "color": "ihi",
+                "pais": "ih",
+                "precioBase": 50000.0,
+                "pantalla": "crt",
+                "pulgadas": 60.0,
+                "definicion": "FULL HD",
+                "internet": true
+            }
+        },
+        {
+            "__class__": "Televisor",
+            "__atributos__": {
+                "marca": "philips",
+                "modelo": "new",
+                "color": "rojo",
+                "pais": "arg",
+                "precioBase": 300.0,
+                "pantalla": "vga",
+                "pulgadas": 30.0,
+                "definicion": "HD",
+                "internet": false
+            }
+        },
+        {
+            "__class__": "Heladera",
+            "__atributos__": {
+                "marca": "philips",
+                "modelo": "fr",
+                "color": "casi",
+                "pais": "malvinas",
+                "precioBase": 7000.0,
+                "capacidad": 3,
+                "freezer": false,
+                "ciclica": false
+            }
+        },
+        {
+            "__class__": "Lavarropa",
+            "__atributos__": {
+                "marca": "philips",
+                "modelo": "nuevo",
+                "color": "blanco",
+                "pais": "chi",
+                "precioBase": 90000.0,
+                "capacidad": 7,
+                "velocidad": 300,
+                "programas": 3,
+                "carga": "frontal"
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+def lecturaArchivos(self):
+        archivo = open( 'Facultades.csv')
+        reader = csv.reader( archivo, delimiter = ';' )
+        fila=next(reader)
+        bandera = True
+        print('Facultad')
+        while bandera:
+            print(fila)
+            print('Carreras:')
+            filaCarrera=next(reader)
+            while bandera and fila[0]==filaCarrera[0]:
+                print(filaCarrera)
+                try:
+                    filaCarrera=next(reader)
+                except StopIteration:
+                    bandera=False
+            fila=filaCarrera
+        archivo.close()
