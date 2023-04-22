@@ -1,0 +1,10 @@
+ha yqye ir insertando n*f(n-1) hasta llegar al caso base. Cuando llegamos a f1, empezamos a suprimir.
+usar las operaciones insertar y suprimir. 
+mostrar resutlado
+
+
+ej2
+hay que hacer un Torres de Hanoi interactivo
+crear 3 pilas A,B,C 
+permitir al usuario pasar discos de una pila a la otra
+si no es valido el pasaje, volver los discos 
