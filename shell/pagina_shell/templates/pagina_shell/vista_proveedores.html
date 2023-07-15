@@ -1,0 +1,24 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Proveedores
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son proveedores de <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <ol>
+            {% for proveedor in proveedores %}
+                {% include 'pagina_shell/includes/lista-proveedores.html' with nombre=proveedor.nombre dni=proveedor.dni tel=proveedor.telefono dir=proveedor.direccion%}
+            {% endfor %}
+        </ol>
+    </section>
+    <article>
+       {% include 'pagina_shell/includes/form-base.html' with clase="proveedor" form=form %}
+    </article>
+{% endblock %}

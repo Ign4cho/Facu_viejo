@@ -1,0 +1,22 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Producto {{ producto.codigo }}
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son los proveedores que proveen {{ producto.nombre }} en <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <ol>
+            {% for proveedor in proveedores %}
+                {% include 'pagina_shell/includes/lista-proveedores.html' with nombre=proveedor.nombre dni=proveedor.dni tel=proveedor.telefono dir=proveedor.direccion %}
+            {% endfor %}
+        </ol>
+    </section>
+   
+{% endblock %}

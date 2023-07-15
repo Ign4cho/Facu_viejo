@@ -1,0 +1,25 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %} SHELL S.R.L. {% endblock %}
+
+{% block main-header %}
+    <h1> Elija una de las Opciones </h1>
+{% endblock %}
+
+{% block body %} 
+    <ul>
+        <h3><a href="/empleados/">Ver Empleados</a></h3>
+        <h3><a href="/clientes/">Ver Clientes</a></h3>
+        <h3><a href="/proveedores/">Ver Proveedores</a></h3>
+        <h3><a href="/productos/">Ver Productos</a></h3>
+        <h3><a href="/facturas/">Ver facturas</a></h3>
+    </ul>
+    <h1>Otras Funcionalidades</h1>
+    <ul>
+        <h3><a href="/facturas-b/">Ver clientes que han requerido factura tipo B</a></h3>
+        <h3><a href='/ventas-uno/'>Ver productos vendidos por empleados de tipo 1</a></h3>
+    </ul>
+    {% endblock %}
+```

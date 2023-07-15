@@ -1,0 +1,25 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Ventas {{empleado.nombre}}
+{% endblock %}
+
+{% block main-header %}
+    Detalle de {{ empleado.nombre }}, de <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <h3>Detalle de ventas de {{empleado.nombre}}</h3>
+        <ol>
+            {% for venta in ventas %}
+                {% include 'pagina_shell/includes/lista-ventas.html' with producto=venta.venta_producto cantidad=venta.venta_cantidad%}
+            {% endfor %}
+        </ol>
+    </section>
+    <article>
+       <p>Total vendido por el empleado = {{total_venta}}</p>
+    </article>
+{% endblock %}

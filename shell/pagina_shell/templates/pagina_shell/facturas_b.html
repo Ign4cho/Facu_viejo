@@ -1,0 +1,22 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Clientes B
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son clientes que han requerido alguna factura de tipo B de <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <ol>
+            {% for cliente in clientes %}
+                {% include 'pagina_shell/includes/lista-clientes.html' with nombre=cliente.nombre dni=cliente.dni socio=cliente.socio tel=cliente.telefono dir=cliente.direccion%}
+            {% endfor %}
+        </ol>
+    </section>
+    
+{% endblock %}

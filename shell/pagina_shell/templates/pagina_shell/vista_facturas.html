@@ -1,0 +1,24 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Facturas
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son facturas emitidad por <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <ol>
+            {% for factura in facturas %}
+                {% include 'pagina_shell/includes/lista-facturas.html' with num=factura.numero fecha=factura.fecha tipo=factura.tipo%}
+            {% endfor %}
+        </ol>
+    </section>
+        <article>
+           {% include 'pagina_shell/includes/form-base.html' with clase="factura nueva" form=form %}
+        </article>
+{% endblock %}

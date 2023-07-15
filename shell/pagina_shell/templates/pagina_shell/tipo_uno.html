@@ -1,0 +1,23 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Ventas empleados tipo 1
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son productos vendidos por empleados de tipo 1, de <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <h3>Productos vendidos por empleados de tipo 1</h3>
+        <ol>
+            {% for producto in productos %}
+                {% include 'pagina_shell/includes/lista-productos.html' with nombre=producto.nombre codigo=producto.codigo precio=producto.precio stock=producto.stock%}
+            {% endfor %}
+        </ol>
+    </section>
+    
+{% endblock %}

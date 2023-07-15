@@ -1,0 +1,24 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{proveedor.nombre}} Proveedor
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son productos provistos por {{proveedor.nombre}} en <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        <ol>
+            {% for linea in provee %}
+                {% include 'pagina_shell/includes/lista-provee.html' with producto=linea.producto.nombre cant=linea.cantidad %}
+            {% endfor %}
+        </ol>
+    </section>
+    <article>
+       {% include 'pagina_shell/includes/form-base.html' with clase="producto" form=form %}
+    </article>
+{% endblock %}

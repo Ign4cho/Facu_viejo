@@ -1,0 +1,37 @@
+{% extends 'pagina_shell/base/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Factura {{ factura.numero }} 
+{% endblock %}
+
+{% block main-header %}
+    Los siguientes son las ventas de la Factura {{ factura.numero }} emitidad por <a href="/home">SHELL S.R.L.</a>
+{% endblock %}
+
+{% block body %}
+    <section>
+        {% if ventas %}
+            <h3>Detalle de la Factura {{ factura.numero }} </h3>
+        {% else %}
+            <h3>La Factura {{ factura.numero }} no tiene ventas asociadas</h3>
+        {% endif %}
+        <h3>Empleado: {{ empleado }} -- Cliente {{cliente}} </h3>
+        <ol>
+            {% for venta in ventas %}
+                {% include 'pagina_shell/includes/lista-ventas.html' with producto=venta.venta_producto.nombre cantidad=venta.venta_cantidad%}
+            {% endfor %}
+        </ol>
+        <h5>Total: {{ precio_total }}</h5>
+    </section>
+    {% if form2 != None %}
+        <article>
+            {% include 'pagina_shell/includes/form-base.html' with clase="producto" form=form2 %}
+        </article>
+    {% else %}
+        <article>
+           {% include 'pagina_shell/includes/form-base.html' with clase="producto" form=form %}
+        </article>
+    {% endif %}
+{% endblock %}

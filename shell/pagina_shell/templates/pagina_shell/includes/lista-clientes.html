@@ -1,0 +1,15 @@
+<li>
+    <article>
+        <div>
+            <h3>{{ nombre }} </h3>
+            <h4> {{ dni }} </h4>
+            {% if socio %}
+                <p> Socio </p>
+            {% else %}
+                <p> No socio </p>
+            {% endif %}
+            <p> Telefono: {{ tel }} </p>
+            <p> Direccion: <address>{{ dir }}</address> </p>
+        </div>
+    </article>
+</li>

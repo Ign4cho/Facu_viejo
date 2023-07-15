@@ -1,0 +1,11 @@
+<section id="registro">
+    <h2>Registrar un {{ clase }}</h2>
+        <form method="POST">
+            <ul>
+                {{ form.as_ul }}
+            </ul>
+            {% csrf_token %}
+            <button type="submit">Registrarse</button>
+        </form>
+        
+</section>
